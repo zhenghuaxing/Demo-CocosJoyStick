@@ -76,7 +76,7 @@ cc.Class({
 
     _touchStartEvent(event) {
         JoystickEvent.getInstance().emit(JoystickEnum.JoystickEventType.TOUCH_START, "joystick touch start", 10);
-        const touchPos = this.node.convertToNodeSpaceAR(event.getLocation());
+        const touchPos = this.node.git(event.getLocation());
 
         if (this.joystickType === JoystickEnum.JoystickType.FIXED) {
             this._stickPos = this.ring.getPosition();
